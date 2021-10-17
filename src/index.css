@@ -28,3 +28,12 @@ code {
 .footer-appointment-color {
 	background-color: #7f86ff33;
 }
+
+.regular-btn {
+	background-color: rgb(88 39 207) !important;
+	border: none !important;
+}
+
+.regular-text-color {
+	color: rgb(88 39 207) !important;
+}
