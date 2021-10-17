@@ -15,6 +15,14 @@ const Footer = () => {
 					<Appointment></Appointment>
 				</Row>
 			</Container>
+			<hr />
+			<p className="text-white p-3 m-0 text-center">
+				Develop by
+				<a className="ms-2 footer-icon-color" target="_blank" href="">
+					Rubel Sarker
+				</a>
+				<span className="ms-2">&copy; 2021 all rights reserved</span>
+			</p>
 		</footer>
 	);
 };

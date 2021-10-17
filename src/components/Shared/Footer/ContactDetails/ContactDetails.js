@@ -4,7 +4,7 @@ import {
 	faLocationArrow,
 	faEnvelopeOpen,
 	faClock,
-	faPhone,
+	faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 const ContactDetails = () => {
@@ -36,7 +36,7 @@ const ContactDetails = () => {
 			<p>
 				<FontAwesomeIcon
 					className="fa-1x footer-icon-color me-3"
-					icon={faPhone}
+					icon={faPhoneAlt}
 				/>
 				(+051) 424 4962
 			</p>
