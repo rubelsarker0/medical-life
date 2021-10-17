@@ -14,7 +14,6 @@ const HeaderNav = () => {
 			<Navbar expand="lg">
 				<Container>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
-
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto fw-bold mx-auto">
 							<Nav.Link href="#home">HOME</Nav.Link>
@@ -42,7 +41,7 @@ const HeaderNav = () => {
 								</a>
 								<a href="">
 									<FontAwesomeIcon
-										className="fa-2x  text-info"
+										className="fa-2x  text-warning"
 										icon={faInstagram}
 									/>
 								</a>
