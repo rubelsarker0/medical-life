@@ -1,5 +1,5 @@
 .email-icon {
-	color: #00e5cc;
+	color: rgb(88 39 207) !important;
 }
 
 .border-generic {
@@ -9,7 +9,7 @@
 }
 
 .btn-login {
-	background-color: #040447 !important;
+	background: rgb(88 39 207) !important;
 	border: none !important;
 }
 .bottom-border {

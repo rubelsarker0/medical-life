@@ -8,6 +8,7 @@ import {
 	faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import './HeaderNav.css';
+import { Link } from 'react-router-dom';
 const HeaderNav = () => {
 	return (
 		<>
@@ -16,10 +17,18 @@ const HeaderNav = () => {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto fw-bold mx-auto">
-							<Nav.Link href="#home">HOME</Nav.Link>
-							<Nav.Link href="#link">ABOUT US</Nav.Link>
-							<Nav.Link href="#link">SERVICES</Nav.Link>
-							<Nav.Link href="#link">CONTACT</Nav.Link>
+							<Link className="nav-link" to="/home">
+								HOME
+							</Link>
+							<Link className="nav-link" to="/about">
+								ABOUT US
+							</Link>
+							<Link className="nav-link" to="/services">
+								SERVICES
+							</Link>
+							<Link className="nav-link" to="/contact">
+								CONTACT
+							</Link>
 							<div className="social-media">
 								<a href="">
 									<FontAwesomeIcon
@@ -41,7 +50,7 @@ const HeaderNav = () => {
 								</a>
 								<a href="">
 									<FontAwesomeIcon
-										className="fa-2x  text-warning"
+										className="fa-2x text-warning"
 										icon={faInstagram}
 									/>
 								</a>

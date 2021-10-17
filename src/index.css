@@ -16,3 +16,15 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+.text-format {
+	text-align: justify;
+}
+
+.footer-icon-color {
+	color: #00e5cc !important;
+}
+
+.footer-appointment-color {
+	background-color: #7f86ff33;
+}
