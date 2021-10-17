@@ -1,0 +1,18 @@
+.email-icon {
+	color: #00e5cc;
+}
+
+.border-generic {
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	border-color: #eaeaea;
+}
+
+.btn-login {
+	background-color: #040447 !important;
+	border: none !important;
+}
+.bottom-border {
+	margin-top: 25px !important;
+	border-color: #eaeaea;
+}
