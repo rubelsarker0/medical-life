@@ -12,11 +12,11 @@ import { useHistory } from 'react-router';
 const TopHeader = () => {
 	const history = useHistory();
 	const handleSignInClick = () => {
-		history.push('/login');
+		history.push('/signin');
 	};
 	return (
 		<Row>
-			<Col lg={3} xs={12}>
+			<Col lg={3} className="d-none d-lg-block border-generic">
 				<img className="img-fluid w-75" src={logo} alt="" />
 			</Col>
 			<Col className="d-none d-lg-block border-generic" lg={3}>
@@ -65,7 +65,7 @@ const TopHeader = () => {
 					</Button>
 				</div>
 			</Col>
-			<hr className="bottom-border" />
+			<hr className="bottom-border d-none d-lg-block my-auto" />
 		</Row>
 	);
 };

@@ -18,10 +18,10 @@ function App() {
 				<Route path="/home">
 					<Home></Home>
 				</Route>
-				<Route path="signin">
+				<Route path="/signin">
 					<SignIn></SignIn>
 				</Route>
-				<Route path="signup">
+				<Route path="/signup">
 					<SignUp></SignUp>
 				</Route>
 				<Route path="*">
