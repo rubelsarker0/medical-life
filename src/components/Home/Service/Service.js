@@ -13,7 +13,7 @@ const Service = ({ service }) => {
 			<Card className="h-100 bg-white border-0 shadow">
 				<Card.Img variant="top" src={service.serviceUrl} />
 				<Card.Body>
-					<Card.Title className="text-success">
+					<Card.Title className="regular-text-color">
 						{service.serviceName}
 					</Card.Title>
 					<Card.Text className="text-secondary">
@@ -21,8 +21,7 @@ const Service = ({ service }) => {
 					</Card.Text>
 					<Button
 						onClick={handleServiceDetails}
-						variant="success"
-						className="w-100 rounded-pill"
+						className="regular-btn w-100 rounded-pill"
 					>
 						{'Read More ->'}
 					</Button>

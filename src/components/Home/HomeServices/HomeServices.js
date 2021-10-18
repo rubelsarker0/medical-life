@@ -7,8 +7,8 @@ const HomeServices = ({ services }) => {
 		<section className="py-5 bg-blue-500">
 			<Container>
 				<div className="text-center">
-					<h5 className="text-info">How Our Services Works</h5>
-					<h1 className="text-navy">Our Top Most Priority Services</h1>
+					<h5 className="text-black">How Our Services Works</h5>
+					<h1 className="regular-text-color">Our Top Most Priority Services</h1>
 					<p className="text-secondary w-75 mx-auto">
 						A responsive Emergency Department and Minor Emergency Care Unit
 						treats more than 50,000 patients annually. In recent years, a robust

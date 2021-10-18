@@ -17,32 +17,32 @@ const Doctor = ({ doctorImage, name, passion }) => {
 				</div>
 				<div
 					style={{ top: '80%', left: '5%' }}
-					className="text-center bg-navy rounded rounded-3 p-4 w-90 mx-auto position-absolute"
+					className="text-center doctor-card rounded rounded-3 p-4 w-90 mx-auto position-absolute"
 				>
-					<h6 className="text-info">{passion}</h6>
-					<h3 className="text-white">{name}</h3>
+					<h4 className="text-white">{passion}</h4>
+					<h3 className="text-white fw-bold">{name}</h3>
 					<div className=" mt-4">
 						<a href="">
 							<FontAwesomeIcon
-								className="fa-2x text-white me-3 p-2 bg-info rounded-circle"
+								className="fa-2x text-white me-3 p-2 doctor-icon-color rounded-circle"
 								icon={faFacebook}
 							/>
 						</a>
 						<a href="">
 							<FontAwesomeIcon
-								className="fa-2x text-white me-3 p-2 bg-info rounded-circle"
+								className="fa-2x text-white me-3 p-2 doctor-icon-color rounded-circle"
 								icon={faTwitter}
 							/>
 						</a>
 						<a href="">
 							<FontAwesomeIcon
-								className="fa-2x text-white me-3 p-2 bg-info rounded-circle"
+								className="fa-2x text-white me-3 p-2 doctor-icon-color rounded-circle"
 								icon={faYoutube}
 							/>
 						</a>
 						<a href="">
 							<FontAwesomeIcon
-								className="fa-2x text-white p-2 bg-info rounded-circle"
+								className="fa-2x text-white p-2 doctor-icon-color rounded-circle"
 								icon={faInstagram}
 							/>
 						</a>

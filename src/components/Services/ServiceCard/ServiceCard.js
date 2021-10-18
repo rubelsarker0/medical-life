@@ -8,7 +8,7 @@ const ServiceCard = ({ title, icon }) => {
 		<Col>
 			<div className="shadow bg-light rounded p-3 p-lg-4">
 				<div>
-					<FontAwesomeIcon className="fa-3x text-info" icon={icon} />
+					<FontAwesomeIcon className="fa-3x regular-text-color" icon={icon} />
 				</div>
 				<h3 className="text-navy my-3">{title}</h3>
 				<p className="text-secondary">

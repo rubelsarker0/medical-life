@@ -34,10 +34,29 @@ code {
 	border: none !important;
 }
 
+.regular-bg-color {
+	background-color: rgb(88 39 207) !important;
+}
+
 .regular-text-color {
 	color: rgb(88 39 207) !important;
 }
 
 .single-doctor {
 	margin-bottom: 80px;
+}
+
+.generic-color {
+	color: #00e5cc !important;
+}
+
+.doctor-icon-color {
+	background: #00e5cc !important;
+}
+.w-90 {
+	width: 90%;
+}
+
+.doctor-card {
+	background-color: #000044c9 !important;
 }
