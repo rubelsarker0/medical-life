@@ -16,7 +16,7 @@ const TopHeader = () => {
 	};
 	return (
 		<Row>
-			<Col lg={3} className="d-none d-lg-block border-generic">
+			<Col lg={3} className="d-none d-lg-block">
 				<img className="img-fluid w-75" src={logo} alt="" />
 			</Col>
 			<Col className="d-none d-lg-block border-generic" lg={3}>
