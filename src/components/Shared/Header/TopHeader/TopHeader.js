@@ -29,7 +29,7 @@ const TopHeader = () => {
 					</div>
 					<div className="">
 						<h6>
-							<span className="">Mail Us</span>
+							<span className="text-secondary">Mail Us</span>
 						</h6>
 						<h6>
 							<span className="text-secondary">support@mediclelife.com</span>
@@ -47,7 +47,7 @@ const TopHeader = () => {
 					</div>
 					<div className="">
 						<h6>
-							<span className="">Contact Us</span>
+							<span className="text-secondary">Contact Us</span>
 						</h6>
 						<h6>
 							<span className="text-secondary">(+051) 424 4962</span>

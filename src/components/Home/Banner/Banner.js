@@ -15,7 +15,7 @@ const Banner = () => {
 				<Row lg={2} xs={1} className="g-4">
 					<Col>
 						<div className="bg-light rounded p-5 h-auto">
-							<h1 className="text-navy mb-5">
+							<h1 className="regular-text-color mb-5">
 								Best Medical & Healthcare Service For Your Family
 							</h1>
 							<p className="text-secondary mb-5">
