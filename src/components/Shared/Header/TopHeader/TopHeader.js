@@ -58,7 +58,7 @@ const TopHeader = () => {
 			<Col className="d-none d-lg-block my-auto" lg={3}>
 				<div className="d-flex align-items- justify-content-end">
 					<Button
-						className=" btn-login rounded-pill px-5 fw-bold"
+						className="btn-login rounded-pill px-5 fw-bold"
 						onClick={handleSignInClick}
 					>
 						Sign In

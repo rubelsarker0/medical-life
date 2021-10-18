@@ -40,25 +40,25 @@ const HeaderNav = () => {
 							<div className="social-media">
 								<a href="">
 									<FontAwesomeIcon
-										className="fa-2x me-3 text-primary"
+										className="fa-2x me-3 footer-icon-color"
 										icon={faFacebook}
 									/>
 								</a>
 								<a href="">
 									<FontAwesomeIcon
-										className="fa-2x me-3 text-info"
+										className="fa-2x me-3 footer-icon-color"
 										icon={faTwitter}
 									/>
 								</a>
 								<a href="">
 									<FontAwesomeIcon
-										className="fa-2x me-3 text-danger"
+										className="fa-2x me-3 footer-icon-color"
 										icon={faYoutube}
 									/>
 								</a>
 								<a href="">
 									<FontAwesomeIcon
-										className="fa-2x text-warning"
+										className="fa-2x footer-icon-color"
 										icon={faInstagram}
 									/>
 								</a>

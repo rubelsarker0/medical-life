@@ -62,7 +62,10 @@ const SignIn = () => {
 								</Col>
 							</Row>
 							<div className="text-center mt-3">
-								Don't have an account? <Link to="/signup">SignUp</Link>
+								Don't have an account?{' '}
+								<Link to="/signup" className="fst-italic">
+									SignUp
+								</Link>
 							</div>
 						</div>
 					</Col>

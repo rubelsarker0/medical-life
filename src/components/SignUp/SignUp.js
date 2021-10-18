@@ -20,10 +20,10 @@ const SignUp = () => {
 						<div className="rounded rounded-3 shadow-lg bg-light p-5">
 							<h2 className="text-navy mb-3 text-center">
 								<FontAwesomeIcon
-									className="fa-1x text-info me-3"
+									className="fa-1x regular-text-color me-3"
 									icon={faLock}
 								/>
-								Register
+								Signup
 							</h2>
 							<Form>
 								<Form.Group className="mb-3" controlId="formName">
@@ -42,8 +42,8 @@ const SignUp = () => {
 								<Form.Group className="mb-3" controlId="formBasicCheckbox">
 									<Form.Check type="checkbox" label="Remember me" />
 								</Form.Group>
-								<Button className="w-100" variant="primary" type="submit">
-									Register
+								<Button className="btn-login rounded-pill w-100" type="submit">
+									Signup
 								</Button>
 							</Form>
 							<div className="divider text-center my-3 fs-5">
@@ -51,7 +51,7 @@ const SignUp = () => {
 							</div>
 							<Row lg={2} xs={1} className="g-3">
 								<Col>
-									<Button variant="info" className="w-100 text-white fw-bold">
+									<Button variant="danger" className="w-100 text-white fw-bold">
 										<FontAwesomeIcon
 											className="fa-1x text-white me-2"
 											icon={faGoogle}
@@ -69,8 +69,11 @@ const SignUp = () => {
 									</Button>
 								</Col>
 							</Row>
-							<div className="text-center mt-3">
-								Already have an account? <Link to="/signin">Log In</Link>
+							<div className="text-center  mt-3">
+								Already have an account?{' '}
+								<Link to="/signin" className="fst-italic">
+									Log In
+								</Link>
 							</div>
 						</div>
 					</Col>
