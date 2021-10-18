@@ -15,7 +15,6 @@ const HealthCare = () => {
 		<section className="py-5">
 			<Container>
 				<div className="text-center">
-					<h5 className="text-black">Medical Services</h5>
 					<h1 className="regular-text-color">Our Healthcare Service</h1>
 					<p className="text-secondary w-75 mx-auto">
 						Since its founding Brivona has been providing its patients with the
