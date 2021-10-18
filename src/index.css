@@ -37,3 +37,7 @@ code {
 .regular-text-color {
 	color: rgb(88 39 207) !important;
 }
+
+.single-doctor {
+	margin-bottom: 80px;
+}

@@ -6,6 +6,7 @@ import NotFound from './components/NotFound/NotFound';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Shared/Footer/Footer';
+import AboutUs from './components/AboutUs/AboutUs';
 
 function App() {
 	return (
@@ -23,6 +24,9 @@ function App() {
 				</Route>
 				<Route path="/signup">
 					<SignUp></SignUp>
+				</Route>
+				<Route path="/about">
+					<AboutUs></AboutUs>
 				</Route>
 				<Route path="*">
 					<NotFound></NotFound>

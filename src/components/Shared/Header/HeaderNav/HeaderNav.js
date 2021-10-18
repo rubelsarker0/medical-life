@@ -28,11 +28,11 @@ const HeaderNav = () => {
 							<Link className="nav-link" to="/home">
 								HOME
 							</Link>
-							<Link className="nav-link" to="/about">
-								ABOUT US
-							</Link>
 							<Link className="nav-link" to="/services">
 								SERVICES
+							</Link>
+							<Link className="nav-link" to="/about">
+								ABOUT US
 							</Link>
 							<Link className="nav-link" to="/contact">
 								CONTACT
