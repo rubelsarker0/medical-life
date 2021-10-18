@@ -5,7 +5,9 @@ import { Col, Button, Container, Form, Row } from 'react-bootstrap';
 import signInImg from '../../assets/images/signin-img.svg';
 import './SignIn.css';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 const SignIn = () => {
+	const { handleGoogleSignIn } = useAuth();
 	const handleEmailSignIn = () => {};
 	return (
 		<section
@@ -51,7 +53,11 @@ const SignIn = () => {
 							</div>
 							<Row lg={2} xs={1} className="g-5">
 								<Col>
-									<Button variant="danger" className="w-100 text-white fw-bold">
+									<Button
+										onClick={handleGoogleSignIn}
+										variant="danger"
+										className="w-100 text-white fw-bold"
+									>
 										Google Sign In
 									</Button>
 								</Col>

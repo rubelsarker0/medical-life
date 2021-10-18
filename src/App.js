@@ -9,39 +9,42 @@ import Footer from './components/Shared/Footer/Footer';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Services from './components/Services/Services';
+import AuthProvider from './components/AuthProvider/AuthProvider';
 
 function App() {
 	return (
-		<Router>
-			<Header></Header>
-			<Switch>
-				<Route exact path="/">
-					<Home></Home>
-				</Route>
-				<Route path="/home">
-					<Home></Home>
-				</Route>
-				<Route path="/signin">
-					<SignIn></SignIn>
-				</Route>
-				<Route path="/signup">
-					<SignUp></SignUp>
-				</Route>
-				<Route path="/services">
-					<Services></Services>
-				</Route>
-				<Route path="/about">
-					<AboutUs></AboutUs>
-				</Route>
-				<Route path="/contact">
-					<Contact></Contact>
-				</Route>
-				<Route path="*">
-					<NotFound></NotFound>
-				</Route>
-			</Switch>
-			<Footer></Footer>
-		</Router>
+		<AuthProvider>
+			<Router>
+				<Header></Header>
+				<Switch>
+					<Route exact path="/">
+						<Home></Home>
+					</Route>
+					<Route path="/home">
+						<Home></Home>
+					</Route>
+					<Route path="/signin">
+						<SignIn></SignIn>
+					</Route>
+					<Route path="/signup">
+						<SignUp></SignUp>
+					</Route>
+					<Route path="/services">
+						<Services></Services>
+					</Route>
+					<Route path="/about">
+						<AboutUs></AboutUs>
+					</Route>
+					<Route path="/contact">
+						<Contact></Contact>
+					</Route>
+					<Route path="*">
+						<NotFound></NotFound>
+					</Route>
+				</Switch>
+				<Footer></Footer>
+			</Router>
+		</AuthProvider>
 	);
 }
 
