@@ -10,6 +10,8 @@ import {
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../../assets/images/logo-medicalife.png';
+import userIcon from '../../../../assets/images/user-img-icon.png';
+
 import './HeaderNav.css';
 import useAuth from '../../../../hooks/useAuth';
 
@@ -28,16 +30,36 @@ const HeaderNav = () => {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto fw-bold mx-auto">
-							<Link className="nav-link" to="/home">
+							<Link
+								exact
+								activeClassName="text-info"
+								className="nav-link"
+								to="/home"
+							>
 								HOME
 							</Link>
-							<Link className="nav-link" to="/services">
+							<Link
+								exact
+								activeClassName="text-info"
+								className="nav-link"
+								to="/services"
+							>
 								SERVICES
 							</Link>
-							<Link className="nav-link" to="/about">
+							<Link
+								exact
+								activeClassName="text-info"
+								className="nav-link"
+								to="/about"
+							>
 								ABOUT US
 							</Link>
-							<Link className="nav-link" to="/contact">
+							<Link
+								exact
+								activeClassName="text-info"
+								className="nav-link"
+								to="/contact"
+							>
 								CONTACT
 							</Link>
 							<div className={user ? 'mx-auto' : 'ms-auto'}>
@@ -98,7 +120,7 @@ const HeaderNav = () => {
 								<img
 									width="50px"
 									className="rounded-circle"
-									src={user.photoURL}
+									src={user.photoURL ? user.photoURL : userIcon}
 									alt=""
 								/>
 							</div>

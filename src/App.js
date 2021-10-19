@@ -11,7 +11,9 @@ import Contact from './components/Contact/Contact';
 import Services from './components/Services/Services';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AuthProvider from './components/AuthProvider/AuthProvider';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateRoute, {
+	AuthPrivateRoute,
+} from './components/PrivateRoute/PrivateRoute';
 
 function App() {
 	return (
@@ -25,24 +27,24 @@ function App() {
 					<Route path="/home">
 						<Home></Home>
 					</Route>
-					<Route path="/signin">
+					<AuthPrivateRoute path="/signin">
 						<SignIn></SignIn>
-					</Route>
-					<Route path="/signup">
+					</AuthPrivateRoute>
+					<AuthPrivateRoute path="/signup">
 						<SignUp></SignUp>
-					</Route>
-					<Route path="/services">
+					</AuthPrivateRoute>
+					<PrivateRoute path="/services">
 						<Services></Services>
-					</Route>
+					</PrivateRoute>
 					<PrivateRoute path="/service/:id">
 						<ServiceDetails></ServiceDetails>
 					</PrivateRoute>
 					<Route path="/about">
 						<AboutUs></AboutUs>
 					</Route>
-					<Route path="/contact">
+					<PrivateRoute path="/contact">
 						<Contact></Contact>
-					</Route>
+					</PrivateRoute>
 					<Route path="*">
 						<NotFound></NotFound>
 					</Route>

@@ -5,7 +5,7 @@ import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Col, Button, Container, Form, Row } from 'react-bootstrap';
 import signupImg from '../../assets/images/signup-img.svg';
 import './SighUp.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const SignUp = () => {
@@ -16,13 +16,35 @@ const SignUp = () => {
 		handleGoogleSignIn,
 		handleGithubSignIn,
 		handleEmailPasswordRegister,
+		setUserName,
 	} = useAuth();
+
+	const location = useLocation();
+	const history = useHistory();
+
+	const googleSignIn = () => {
+		handleGoogleSignIn()
+			.then((result) => {
+				history.push(location.state?.from || '/home');
+			})
+			.catch((error) => console.log(error.message));
+	};
+
+	const gitHubSignIn = () => {
+		handleGithubSignIn().then((result) => {
+			history.push(location.state?.from || '/home');
+		});
+	};
 
 	const handleEmailSignup = (event) => {
 		event.preventDefault();
-		handleEmailPasswordRegister(email, password, name);
+		handleEmailPasswordRegister(email, password, name).then((result) => {
+			setUserName(name);
+			history.push(location.state?.from || '/home');
+		});
 		console.log(email, password);
 	};
+
 	return (
 		<section
 			style={{ minHeight: '650px' }}
@@ -80,7 +102,7 @@ const SignUp = () => {
 							<Row lg={2} xs={1} className="g-3">
 								<Col>
 									<Button
-										onClick={handleGoogleSignIn}
+										onClick={googleSignIn}
 										variant="danger"
 										className="w-100 text-white fw-bold"
 									>
@@ -93,7 +115,7 @@ const SignUp = () => {
 								</Col>
 								<Col>
 									<Button
-										onClick={handleGithubSignIn}
+										onClick={gitHubSignIn}
 										variant="primary"
 										className="w-100 fw-bold"
 									>
