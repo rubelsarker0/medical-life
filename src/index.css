@@ -60,3 +60,9 @@ code {
 .doctor-card {
 	background-color: #000044c9 !important;
 }
+
+.details-card {
+	border-left: 5px solid rgb(88 39 207) !important;
+	border-right: 5px solid rgb(88 39 207) !important;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
