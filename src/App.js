@@ -9,7 +9,9 @@ import Footer from './components/Shared/Footer/Footer';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Services from './components/Services/Services';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AuthProvider from './components/AuthProvider/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
 	return (
@@ -32,6 +34,9 @@ function App() {
 					<Route path="/services">
 						<Services></Services>
 					</Route>
+					<PrivateRoute path="/service/:id">
+						<ServiceDetails></ServiceDetails>
+					</PrivateRoute>
 					<Route path="/about">
 						<AboutUs></AboutUs>
 					</Route>

@@ -5,7 +5,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Col, Button, Container, Form, Row } from 'react-bootstrap';
 import signInImg from '../../assets/images/signin-img.svg';
 import './SignIn.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 const SignIn = () => {
 	const [email, setEmail] = useState('');
@@ -17,10 +17,30 @@ const SignIn = () => {
 		handleEmailPasswordSignIn,
 	} = useAuth();
 
+	const location = useLocation();
+	const history = useHistory();
+
 	const handleEmailSignIn = (event) => {
 		event.preventDefault();
-		handleEmailPasswordSignIn(email, password);
+		handleEmailPasswordSignIn(email, password).then((result) => {
+			history.push(location.state?.from || '/home');
+		});
 	};
+
+	const googleSignIn = () => {
+		handleGoogleSignIn()
+			.then((result) => {
+				history.push(location.state?.from || '/home');
+			})
+			.catch((error) => console.log(error.message));
+	};
+
+	const gitHubSignIn = () => {
+		handleGithubSignIn().then((result) => {
+			history.push(location.state?.from || '/home');
+		});
+	};
+
 	return (
 		<section
 			style={{ minHeight: '650px' }}
@@ -74,7 +94,7 @@ const SignIn = () => {
 							<Row lg={2} xs={1} className="g-5">
 								<Col>
 									<Button
-										onClick={handleGoogleSignIn}
+										onClick={googleSignIn}
 										variant="danger"
 										className="w-100 text-white fw-bold"
 									>
@@ -87,7 +107,7 @@ const SignIn = () => {
 								</Col>
 								<Col>
 									<Button
-										onClick={handleGithubSignIn}
+										onClick={gitHubSignIn}
 										variant="primary"
 										className="w-100 fw-bold"
 									>
