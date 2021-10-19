@@ -16,7 +16,7 @@ const HealthCare = () => {
 			<Container>
 				<div className="text-center">
 					<h1 className="regular-text-color">Our Healthcare Service</h1>
-					<p className="text-secondary w-75 mx-auto">
+					<p className="text-secondary text-format  w-75 mx-auto">
 						Since its founding Brivona has been providing its patients with the
 						full medical care, encompassing outpatients services, is neurology,
 						laboratory, imaging diagnostics and more.

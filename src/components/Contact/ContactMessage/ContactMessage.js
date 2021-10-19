@@ -25,9 +25,9 @@ const ContactMessage = () => {
 								/>
 							</div>
 							<div>
-								<h6 className="text-black">Pk, Kishoreganj</h6>
+								<h6 className="text-black">Asah Sarker</h6>
 								<h6 className="text-black">
-									Jl. Raya Kuta No.70, Kuta - Bali Renon,
+									Apartment 56, Dunlin County, Dublin, Ireland
 								</h6>
 							</div>
 						</div>
@@ -41,9 +41,9 @@ const ContactMessage = () => {
 								/>
 							</div>
 							<div>
-								<h6 className="text-black">Pk, Kishoreganj</h6>
+								<h6 className="text-black">Rubel Sarker</h6>
 								<h6 className="text-black">
-									Jl. Raya Kuta No.70, Kuta - Bali Renon,
+									Apartment 56, Dunlin County, Dublin, Ireland
 								</h6>
 							</div>
 						</div>

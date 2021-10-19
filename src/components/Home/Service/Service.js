@@ -15,7 +15,7 @@ const Service = ({ service }) => {
 					<Card.Title className="regular-text-color">
 						{service.serviceName}
 					</Card.Title>
-					<Card.Text className="text-secondary">
+					<Card.Text className="text-secondary text-format ">
 						{service.descriptions}
 					</Card.Text>
 					<Button

@@ -11,7 +11,7 @@ const ServiceCard = ({ title, icon }) => {
 					<FontAwesomeIcon className="fa-3x regular-text-color" icon={icon} />
 				</div>
 				<h3 className="regular-text-color my-3">{title}</h3>
-				<p className="text-secondary">
+				<p className="text-secondary text-format">
 					Behind the word mountains, far from the countries Vokalia and
 					Consonantia, there live the blind texts. Separated they live in
 					Bookmarks grove right
