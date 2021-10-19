@@ -2,7 +2,7 @@
 
 _Our mission is very clear - we want to provide the highest standard of medical care to our patients._
 
-#Our key focus
+# Our key focus
 
 - [x] Our Practice: We are Medical Life. Conveniently located in the newly built Cork Primary Care Centre located off John's Hill in Cork. Dr. Carlo Hilton, Dr. Elisa Hodges and Dr. Ryley Mueller are opening the practice in September 2021.
 - [x] Mission: Our mission is very clear - we want to provide the highest standard of medical care to our patients.
@@ -30,4 +30,3 @@ _Our mission is very clear - we want to provide the highest standard of medical 
 - [x] npm install.
   > Once the node_modules installed -
 - [x] run: npm start to start the application
-      n
