@@ -11,7 +11,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../../assets/images/logo-medicalife.png';
 import userIcon from '../../../../assets/images/user-img-icon.png';
-
 import './HeaderNav.css';
 import useAuth from '../../../../hooks/useAuth';
 

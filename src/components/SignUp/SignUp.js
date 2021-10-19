@@ -12,6 +12,7 @@ const SignUp = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [error, setError] = useState({});
 	const {
 		handleGoogleSignIn,
 		handleGithubSignIn,
@@ -21,6 +22,17 @@ const SignUp = () => {
 
 	const location = useLocation();
 	const history = useHistory();
+
+	const validateRegistration = (name, password) => {
+		const errorMessage = {};
+		if (name.length < 5 || name.length > 15) {
+			errorMessage.name = 'Name Must be between 5 to 15 characters';
+		}
+		if (password.length < 6 || password.length > 14) {
+			errorMessage.password = 'Password Must be between 5 to 14 characters';
+		}
+		return errorMessage;
+	};
 
 	const googleSignIn = () => {
 		handleGoogleSignIn()
@@ -38,11 +50,22 @@ const SignUp = () => {
 
 	const handleEmailSignup = (event) => {
 		event.preventDefault();
-		handleEmailPasswordRegister(email, password, name).then((result) => {
-			setUserName(name);
-			history.push(location.state?.from || '/home');
-		});
-		console.log(email, password);
+		const errorMessage = validateRegistration(name, password);
+
+		if (errorMessage.name || errorMessage.password) {
+			setError(errorMessage);
+			return;
+		}
+
+		handleEmailPasswordRegister(email, password, name)
+			.then((result) => {
+				setUserName(name);
+				history.push(location.state?.from || '/home');
+				setError({});
+			})
+			.catch((e) => {
+				setError({ email: e.message });
+			});
 	};
 
 	return (
@@ -70,6 +93,11 @@ const SignUp = () => {
 										placeholder="Enter Your Name"
 										required
 									/>
+									{error.name && (
+										<Form.Text id="formName" className="text-danger">
+											{error.name}
+										</Form.Text>
+									)}
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicEmail">
 									<Form.Label>Email address</Form.Label>
@@ -79,6 +107,11 @@ const SignUp = () => {
 										placeholder="Enter email"
 										required
 									/>
+									{error.email && (
+										<Form.Text id="formName" className="text-danger">
+											{error.email}
+										</Form.Text>
+									)}
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicPassword">
 									<Form.Label>Password</Form.Label>
@@ -88,6 +121,11 @@ const SignUp = () => {
 										placeholder="Password"
 										required
 									/>
+									{error.password && (
+										<Form.Text id="formName" className="text-danger">
+											{error.password}
+										</Form.Text>
+									)}
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicCheckbox">
 									<Form.Check type="checkbox" label="Remember me" />

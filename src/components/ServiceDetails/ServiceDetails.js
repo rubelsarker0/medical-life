@@ -7,7 +7,7 @@ const ServiceDetails = () => {
 	return (
 		<>
 			<ServiceDetailsCover></ServiceDetailsCover>
-			<section className="py-5">
+			<section className="service-details py-5">
 				<Container>
 					<Row lg={1} xs={1} className="g-4 py-5">
 						<Col className="col">
