@@ -56,10 +56,9 @@ const useFirebase = () => {
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
 				setUser(user);
-				console.log(user);
 			}
 		});
-	}, []);
+	}, [auth]);
 
 	return {
 		user,

@@ -18,7 +18,12 @@ const Footer = () => {
 			<hr />
 			<p className="text-white p-3 m-0 text-center">
 				Develop by
-				<a className="ms-2 footer-icon-color" target="_blank" href="">
+				<a
+					className="ms-2 footer-icon-color"
+					target="_blank"
+					rel="noreferrer"
+					href="https://www.facebook.com/rubelsarker8"
+				>
 					Rubel Sarker
 				</a>
 				<span className="ms-2">&copy; 2021 all rights reserved</span>

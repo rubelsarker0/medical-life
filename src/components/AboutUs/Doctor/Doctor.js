@@ -22,25 +22,41 @@ const Doctor = ({ doctorImage, name, passion }) => {
 					<h4 className="text-white">{passion}</h4>
 					<h3 className="text-white fw-bold">{name}</h3>
 					<div className=" mt-4">
-						<a href="">
+						<a
+							rel="noreferrer"
+							target="_blank"
+							href="https://www.facebook.com/rubelsarker8"
+						>
 							<FontAwesomeIcon
 								className="fa-2x text-white me-3 p-2 doctor-icon-color rounded-circle"
 								icon={faFacebook}
 							/>
 						</a>
-						<a href="">
+						<a
+							rel="noreferrer"
+							target="_blank"
+							href="https://www.facebook.com/rubelsarker8"
+						>
 							<FontAwesomeIcon
 								className="fa-2x text-white me-3 p-2 doctor-icon-color rounded-circle"
 								icon={faTwitter}
 							/>
 						</a>
-						<a href="">
+						<a
+							rel="noreferrer"
+							target="_blank"
+							href="https://www.facebook.com/rubelsarker8"
+						>
 							<FontAwesomeIcon
 								className="fa-2x text-white me-3 p-2 doctor-icon-color rounded-circle"
 								icon={faYoutube}
 							/>
 						</a>
-						<a href="">
+						<a
+							rel="noreferrer"
+							target="_blank"
+							href="https://www.facebook.com/rubelsarker8"
+						>
 							<FontAwesomeIcon
 								className="fa-2x text-white p-2 doctor-icon-color rounded-circle"
 								icon={faInstagram}

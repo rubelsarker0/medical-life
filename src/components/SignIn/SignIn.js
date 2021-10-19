@@ -11,12 +11,8 @@ const SignIn = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [error, setError] = useState('');
-	const {
-		user,
-		handleGoogleSignIn,
-		handleGithubSignIn,
-		handleEmailPasswordSignIn,
-	} = useAuth();
+	const { handleGoogleSignIn, handleGithubSignIn, handleEmailPasswordSignIn } =
+		useAuth();
 
 	const location = useLocation();
 	const history = useHistory();

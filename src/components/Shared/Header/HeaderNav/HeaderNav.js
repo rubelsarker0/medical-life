@@ -8,7 +8,7 @@ import {
 	faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
-import { Link, useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import logo from '../../../../assets/images/logo-medicalife.png';
 import userIcon from '../../../../assets/images/user-img-icon.png';
 import './HeaderNav.css';
@@ -29,59 +29,75 @@ const HeaderNav = () => {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto fw-bold mx-auto">
-							<Link
+							<NavLink
 								exact
 								activeClassName="text-info"
 								className="nav-link"
 								to="/home"
 							>
 								HOME
-							</Link>
-							<Link
+							</NavLink>
+							<NavLink
 								exact
 								activeClassName="text-info"
 								className="nav-link"
 								to="/services"
 							>
 								SERVICES
-							</Link>
-							<Link
+							</NavLink>
+							<NavLink
 								exact
 								activeClassName="text-info"
 								className="nav-link"
 								to="/about"
 							>
 								ABOUT US
-							</Link>
-							<Link
+							</NavLink>
+							<NavLink
 								exact
 								activeClassName="text-info"
 								className="nav-link"
 								to="/contact"
 							>
 								CONTACT
-							</Link>
+							</NavLink>
 							<div className={user ? 'mx-auto' : 'ms-auto'}>
 								<div className="social-media">
-									<a href="">
+									<a
+										rel="noreferrer"
+										target="_blank"
+										href="https://www.facebook.com/rubelsarker8"
+									>
 										<FontAwesomeIcon
 											className="fa-2x me-3 footer-icon-color"
 											icon={faFacebook}
 										/>
 									</a>
-									<a href="">
+									<a
+										rel="noreferrer"
+										target="_blank"
+										href="https://www.facebook.com/rubelsarker8"
+									>
 										<FontAwesomeIcon
 											className="fa-2x me-3 footer-icon-color"
 											icon={faTwitter}
 										/>
 									</a>
-									<a href="">
+									<a
+										rel="noreferrer"
+										target="_blank"
+										href="https://www.facebook.com/rubelsarker8"
+									>
 										<FontAwesomeIcon
 											className="fa-2x me-3 footer-icon-color"
 											icon={faYoutube}
 										/>
 									</a>
-									<a href="">
+									<a
+										rel="noreferrer"
+										target="_blank"
+										href="https://www.facebook.com/rubelsarker8"
+									>
 										<FontAwesomeIcon
 											className="fa-2x footer-icon-color"
 											icon={faInstagram}

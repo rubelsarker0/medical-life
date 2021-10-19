@@ -18,25 +18,41 @@ const Social = () => {
 				making sure all people get the health care services they need.
 			</p>
 			<div>
-				<a href="">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://www.facebook.com/rubelsarker8"
+				>
 					<FontAwesomeIcon
 						className="fa-2x me-3 footer-icon-color"
 						icon={faFacebook}
 					/>
 				</a>
-				<a href="">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://www.facebook.com/rubelsarker8"
+				>
 					<FontAwesomeIcon
 						className="fa-2x me-3 footer-icon-color"
 						icon={faTwitter}
 					/>
 				</a>
-				<a href="">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://www.facebook.com/rubelsarker8"
+				>
 					<FontAwesomeIcon
 						className="fa-2x me-3 footer-icon-color"
 						icon={faYoutube}
 					/>
 				</a>
-				<a href="">
+				<a
+					rel="noreferrer"
+					target="_blank"
+					href="https://www.facebook.com/rubelsarker8"
+				>
 					<FontAwesomeIcon
 						className="fa-2x footer-icon-color"
 						icon={faInstagram}
