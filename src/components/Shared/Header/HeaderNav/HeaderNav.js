@@ -8,7 +8,7 @@ import {
 	faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, useHistory } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import logo from '../../../../assets/images/logo-medicalife.png';
 import userIcon from '../../../../assets/images/user-img-icon.png';
 import './HeaderNav.css';
@@ -53,14 +53,14 @@ const HeaderNav = () => {
 							>
 								ABOUT US
 							</NavLink>
-							<NavLink
+							<Link
 								exact
 								activeClassName="text-info"
 								className="nav-link"
 								to="/contact"
 							>
 								CONTACT
-							</NavLink>
+							</Link>
 							<div className={user ? 'mx-auto' : 'ms-auto'}>
 								<div className="social-media">
 									<a
@@ -103,30 +103,30 @@ const HeaderNav = () => {
 											icon={faInstagram}
 										/>
 									</a>
-									{user ? (
-										<Button
-											onClick={logOut}
-											variant="danger"
-											className="rounded-pill d-block d-lg-none px-5 fw-bold"
-										>
-											Sign out
-										</Button>
-									) : (
-										<Button
-											onClick={handleSignInClick}
-											variant="primary"
-											className="rounded-pill d-block d-lg-none px-5 fw-bold"
-										>
-											<FontAwesomeIcon
-												className="fa-1x me-3 text-white"
-												icon={faLock}
-											/>
-											Sign in
-										</Button>
-									)}
 								</div>
 							</div>
 						</Nav>
+						{user ? (
+							<Button
+								onClick={logOut}
+								variant="danger"
+								className="rounded-pill d-block d-lg-none px-5 fw-bold"
+							>
+								Sign out
+							</Button>
+						) : (
+							<Button
+								onClick={handleSignInClick}
+								variant="primary"
+								className="rounded-pill d-block d-lg-none px-5 fw-bold"
+							>
+								<FontAwesomeIcon
+									className="fa-1x me-3 text-white"
+									icon={faLock}
+								/>
+								Sign in
+							</Button>
+						)}
 						{user && (
 							<div className="d-flex ms-auto align-items-center">
 								<h5 className="fw-bold regular-text-color me-3">

@@ -19,6 +19,7 @@ const SignUp = () => {
 		handleEmailPasswordRegister,
 		setUserName,
 		emailVerification,
+		setLoading,
 	} = useAuth();
 
 	const location = useLocation();
@@ -36,20 +37,27 @@ const SignUp = () => {
 	};
 
 	const googleSignIn = () => {
+		setLoading(true);
 		handleGoogleSignIn()
 			.then((result) => {
 				history.push(location.state?.from || '/home');
 			})
-			.catch((error) => console.log(error.message));
+			.catch((error) => console.log(error.message))
+			.finally(() => setLoading(false));
 	};
 
 	const gitHubSignIn = () => {
-		handleGithubSignIn().then((result) => {
-			history.push(location.state?.from || '/home');
-		});
+		setLoading(true);
+		handleGithubSignIn()
+			.then((result) => {
+				history.push(location.state?.from || '/home');
+			})
+			.catch((error) => console.log(error))
+			.finally(() => setLoading(false));
 	};
 
 	const handleEmailSignup = (event) => {
+		setLoading(true);
 		event.preventDefault();
 		const errorMessage = validateRegistration(name, password);
 
@@ -67,7 +75,8 @@ const SignUp = () => {
 			})
 			.catch((e) => {
 				setError({ email: e.message });
-			});
+			})
+			.finally(() => setLoading(false));
 	};
 
 	return (
