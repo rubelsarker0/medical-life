@@ -23,7 +23,7 @@ const Service = ({ service }) => {
 						onClick={handleServiceDetails}
 						className="regular-btn w-100 rounded-pill"
 					>
-						{'Read More ->'}
+						{'Read More...'}
 					</Button>
 				</Card.Body>
 			</Card>

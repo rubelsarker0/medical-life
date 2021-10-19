@@ -21,7 +21,6 @@ const MedicaLife = () => {
 					<Col className="d-flex align-items-center">
 						<div className="rounded rounded-3 shadow-lg bg-light p-3 p-lg-4 p-xl-5">
 							<div className="mb-4">
-								<h5 className="text-black">About Medical Life</h5>
 								<h2 className="regular-text-color mb-4">
 									We Provide Essential Services For Your Health Care
 								</h2>

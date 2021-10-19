@@ -17,7 +17,7 @@ const ServiceCard = ({ title, icon }) => {
 					Bookmarks grove right
 				</p>
 				<p className="generic-color">
-					Read More <FontAwesomeIcon icon={faArrowRight} />
+					Read More... <FontAwesomeIcon icon={faArrowRight} />
 				</p>
 			</div>
 		</Col>

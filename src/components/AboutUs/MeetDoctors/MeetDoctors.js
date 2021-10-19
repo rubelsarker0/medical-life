@@ -10,7 +10,7 @@ const MeetDoctors = () => {
 		<section className="py-5">
 			<Container>
 				<div className="text-center">
-					<h1 className="regular-text-color">Meet With Our Doctor</h1>
+					<h1 className="regular-text-color">Meet With Our Doctors</h1>
 					<p className="text-secondary w-75 mx-auto">
 						Since its founding Brivona has been providing its patients with the
 						full medical care, encompassing outpatients services, is neurology,
