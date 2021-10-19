@@ -10,6 +10,7 @@ import useAuth from '../../hooks/useAuth';
 const SignIn = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [error, setError] = useState('');
 	const {
 		user,
 		handleGoogleSignIn,
@@ -22,9 +23,11 @@ const SignIn = () => {
 
 	const handleEmailSignIn = (event) => {
 		event.preventDefault();
-		handleEmailPasswordSignIn(email, password).then((result) => {
-			history.push(location.state?.from || '/home');
-		});
+		handleEmailPasswordSignIn(email, password)
+			.then((result) => {
+				history.push(location.state?.from || '/home');
+			})
+			.catch((e) => setError('Email or password are not valid!'));
 	};
 
 	const googleSignIn = () => {
@@ -57,6 +60,7 @@ const SignIn = () => {
 								/>
 								Sign In
 							</h2>
+							{error && <h3 className="text-danger text-center">{error}</h3>}
 							<Form onSubmit={handleEmailSignIn}>
 								<Form.Group className="mb-3" controlId="formBasicEmail">
 									<Form.Label>Email address</Form.Label>

@@ -18,6 +18,7 @@ const SignUp = () => {
 		handleGithubSignIn,
 		handleEmailPasswordRegister,
 		setUserName,
+		emailVerification,
 	} = useAuth();
 
 	const location = useLocation();
@@ -60,6 +61,7 @@ const SignUp = () => {
 		handleEmailPasswordRegister(email, password, name)
 			.then((result) => {
 				setUserName(name);
+				emailVerification();
 				history.push(location.state?.from || '/home');
 				setError({});
 			})

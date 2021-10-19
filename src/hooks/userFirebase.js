@@ -8,6 +8,7 @@ import {
 	signInWithEmailAndPassword,
 	updateProfile,
 	onAuthStateChanged,
+	sendEmailVerification,
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import initializeAuthentication from '../Firebase/firebase.init';
@@ -41,6 +42,10 @@ const useFirebase = () => {
 		updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
 	};
 
+	const emailVerification = () => {
+		sendEmailVerification(auth.currentUser).then(() => {});
+	};
+
 	const logOut = () => {
 		signOut(auth).then(() => {
 			setUser(null);
@@ -63,6 +68,7 @@ const useFirebase = () => {
 		handleGithubSignIn,
 		handleEmailPasswordRegister,
 		handleEmailPasswordSignIn,
+		emailVerification,
 		logOut,
 	};
 };
