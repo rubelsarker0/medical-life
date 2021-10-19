@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Col, Button, Container, Form, Row } from 'react-bootstrap';
 import signupImg from '../../assets/images/signup-img.svg';
 import './SighUp.css';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const SignUp = () => {
-	const handleEmailLogin = () => {};
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const {
+		handleGoogleSignIn,
+		handleGithubSignIn,
+		handleEmailPasswordRegister,
+	} = useAuth();
+
+	const handleEmailSignup = (event) => {
+		event.preventDefault();
+		handleEmailPasswordRegister(email, password, name);
+		console.log(email, password);
+	};
 	return (
 		<section
 			style={{ minHeight: '650px' }}
@@ -25,19 +39,33 @@ const SignUp = () => {
 								/>
 								Signup
 							</h2>
-							<Form>
+							<Form onSubmit={handleEmailSignup}>
 								<Form.Group className="mb-3" controlId="formName">
 									<Form.Label>Your Name</Form.Label>
-									<Form.Control type="email" placeholder="Enter Your Name" />
+									<Form.Control
+										onChange={(event) => setName(event.target.value)}
+										type="text"
+										placeholder="Enter Your Name"
+										required
+									/>
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicEmail">
 									<Form.Label>Email address</Form.Label>
-									<Form.Control type="email" placeholder="Enter email" />
+									<Form.Control
+										onChange={(event) => setEmail(event.target.value)}
+										type="text"
+										placeholder="Enter email"
+										required
+									/>
 								</Form.Group>
-
 								<Form.Group className="mb-3" controlId="formBasicPassword">
 									<Form.Label>Password</Form.Label>
-									<Form.Control type="password" placeholder="Password" />
+									<Form.Control
+										onChange={(event) => setPassword(event.target.value)}
+										type="password"
+										placeholder="Password"
+										required
+									/>
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicCheckbox">
 									<Form.Check type="checkbox" label="Remember me" />
@@ -51,7 +79,11 @@ const SignUp = () => {
 							</div>
 							<Row lg={2} xs={1} className="g-3">
 								<Col>
-									<Button variant="danger" className="w-100 text-white fw-bold">
+									<Button
+										onClick={handleGoogleSignIn}
+										variant="danger"
+										className="w-100 text-white fw-bold"
+									>
 										<FontAwesomeIcon
 											className="fa-1x text-white me-2"
 											icon={faGoogle}
@@ -60,12 +92,16 @@ const SignUp = () => {
 									</Button>
 								</Col>
 								<Col>
-									<Button variant="primary" className="w-100 fw-bold">
+									<Button
+										onClick={handleGithubSignIn}
+										variant="primary"
+										className="w-100 fw-bold"
+									>
 										<FontAwesomeIcon
 											className="fa-1x text-white me-2"
-											icon={faFacebook}
+											icon={faGithub}
 										/>
-										Facebook Sign In
+										GitHub Sign In
 									</Button>
 								</Col>
 							</Row>

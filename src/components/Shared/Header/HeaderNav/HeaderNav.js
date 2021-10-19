@@ -11,9 +11,12 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../../assets/images/logo-medicalife.png';
 import './HeaderNav.css';
+import useAuth from '../../../../hooks/useAuth';
 
 const HeaderNav = () => {
 	const history = useHistory();
+	const { user, logOut } = useAuth();
+
 	const handleSignInClick = () => {
 		history.push('/signin');
 	};
@@ -37,44 +40,69 @@ const HeaderNav = () => {
 							<Link className="nav-link" to="/contact">
 								CONTACT
 							</Link>
-							<div className="social-media">
-								<a href="">
-									<FontAwesomeIcon
-										className="fa-2x me-3 footer-icon-color"
-										icon={faFacebook}
-									/>
-								</a>
-								<a href="">
-									<FontAwesomeIcon
-										className="fa-2x me-3 footer-icon-color"
-										icon={faTwitter}
-									/>
-								</a>
-								<a href="">
-									<FontAwesomeIcon
-										className="fa-2x me-3 footer-icon-color"
-										icon={faYoutube}
-									/>
-								</a>
-								<a href="">
-									<FontAwesomeIcon
-										className="fa-2x footer-icon-color"
-										icon={faInstagram}
-									/>
-								</a>
-								<Button
-									onClick={handleSignInClick}
-									variant="danger"
-									className="rounded-pill px-5 fw-bold d-block d-lg-none mt-3"
-								>
-									<FontAwesomeIcon
-										className="fa-1x me-3 text-white"
-										icon={faLock}
-									/>
-									Log In
-								</Button>
+							<div className={user ? 'mx-auto' : 'ms-auto'}>
+								<div className="social-media">
+									<a href="">
+										<FontAwesomeIcon
+											className="fa-2x me-3 footer-icon-color"
+											icon={faFacebook}
+										/>
+									</a>
+									<a href="">
+										<FontAwesomeIcon
+											className="fa-2x me-3 footer-icon-color"
+											icon={faTwitter}
+										/>
+									</a>
+									<a href="">
+										<FontAwesomeIcon
+											className="fa-2x me-3 footer-icon-color"
+											icon={faYoutube}
+										/>
+									</a>
+									<a href="">
+										<FontAwesomeIcon
+											className="fa-2x footer-icon-color"
+											icon={faInstagram}
+										/>
+									</a>
+									{user ? (
+										<Button
+											onClick={logOut}
+											variant="danger"
+											className="rounded-pill d-block d-lg-none px-5 fw-bold"
+										>
+											Sign out
+										</Button>
+									) : (
+										<Button
+											onClick={handleSignInClick}
+											variant="primary"
+											className="rounded-pill d-block d-lg-none px-5 fw-bold"
+										>
+											<FontAwesomeIcon
+												className="fa-1x me-3 text-white"
+												icon={faLock}
+											/>
+											Sign in
+										</Button>
+									)}
+								</div>
 							</div>
 						</Nav>
+						{user && (
+							<div className="d-flex ms-auto align-items-center">
+								<h5 className="fw-bold regular-text-color me-3">
+									{user.displayName}
+								</h5>
+								<img
+									width="50px"
+									className="rounded-circle"
+									src={user.photoURL}
+									alt=""
+								/>
+							</div>
+						)}
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>

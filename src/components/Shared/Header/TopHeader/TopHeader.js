@@ -4,16 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faEnvelopeOpenText,
 	faPhoneAlt,
+	faLock,
 } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../../../assets/images/logo-medicalife.png';
 import './TopHeader.css';
 import { useHistory } from 'react-router';
+import useAuth from '../../../../hooks/useAuth';
 
 const TopHeader = () => {
 	const history = useHistory();
+	const { user, logOut } = useAuth();
+
 	const handleSignInClick = () => {
 		history.push('/signin');
 	};
+
 	return (
 		<Row>
 			<Col lg={3} className="d-none d-lg-block">
@@ -57,12 +62,25 @@ const TopHeader = () => {
 			</Col>
 			<Col className="d-none d-lg-block my-auto" lg={3}>
 				<div className="d-flex align-items- justify-content-end">
-					<Button
-						className="btn-login rounded-pill px-5 fw-bold"
-						onClick={handleSignInClick}
-					>
-						Sign In
-					</Button>
+					{user ? (
+						<Button
+							className="btn-login rounded-pill px-5 fw-bold"
+							onClick={logOut}
+						>
+							Sign Out
+						</Button>
+					) : (
+						<Button
+							onClick={handleSignInClick}
+							className="btn-login rounded-pill px-5 fw-bold"
+						>
+							<FontAwesomeIcon
+								className="fa-1x me-3 text-white"
+								icon={faLock}
+							/>
+							Sign In
+						</Button>
+					)}
 				</div>
 			</Col>
 			<hr className="bottom-border d-none d-lg-block my-auto" />
